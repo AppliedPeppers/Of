@@ -10,19 +10,26 @@
 
     return number"""
 
-d = {'syms': 0, 'numb': 0}
+d = {}
 
 str = 'abcaaaa'
 i = 0
 num = 0
 other = ['a', 1]
-print(len(str))
+#print(len(str))
+
 while (i < len(str)):
     if (str[i] == 'a'):
         num = num + 1
         other[1] = num
     i = i + 1
-
+print(d.keys())
 d.update([other])
 print(d.keys())
-print(d.get('a'))
+print(d.get('a'))\
+
+d.setdefault(str[1])
+print(d.keys())
+
+
+
