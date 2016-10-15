@@ -1,5 +1,5 @@
 
-num_of_rangs = 500
+num_of_rangs = 50
 
 # возвращает строку с указанным кол-вом решеток(#)
 def high_of_column(n):
