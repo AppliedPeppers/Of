@@ -11,9 +11,10 @@ def high_of_column(n):
 
 def histogram_of_symbols(dic):
     ret_string = ''
-    l = len(dic)
-    percents_of_syms = [val / l for key, val in dic.items()]
+    l = sum([val for key, val in dic.items()])
     for key, value in dic.items():
-        ret_string += '{symbol} : {column}'.format(symbol=key,
-                                                   column=high_of_column(round(percents_of_syms * num_of_rangs)))
+        percents_of_syms = value / l
+        num_of_cols = round(percents_of_syms * num_of_rangs)
+        ret_string += '{symbol} : {column}\n'.format(symbol=key,
+                                                     column=high_of_column(num_of_cols))
     return ret_string
