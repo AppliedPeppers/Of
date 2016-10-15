@@ -1,7 +1,6 @@
 
 num_of_rangs = 50
 
-
 # возвращает строку с указанным кол-вом решеток(#)
 def high_of_column(n):
     s = ''
@@ -19,5 +18,5 @@ def histogram_of_symbols(dic):
         num_of_cols = round(percents_of_syms * num_of_rangs)  # "высота" колонки
         ret_string += '{symbol}({per}%) : {column}\n'.format(symbol=key,
                                                              column=high_of_column(num_of_cols),
-                                                             per=percents_of_syms)
+                                                             per=round(percents_of_syms, 5))
     return ret_string
